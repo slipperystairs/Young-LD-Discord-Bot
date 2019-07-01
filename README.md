@@ -20,7 +20,7 @@ Shoutout to https://github.com/sskiswani for helping me out with the text genera
 +biggie returns lyrics by Biggie Smalls
 +droctagon return lyrics by Dr.Octagon AKA the Dr. Octagonecologyst
 +eminem returns lyrics by Eminem
-+gangstagibbs returns lyrics by Freddie Gibbs
++gibbs returns lyrics by Freddie Gibbs
 +bigl returns lyrics by Big L
 +outkast returnts lyrics by Outkast
 +top10 bot rerturns his top 10 list of best hip-hop artist.
