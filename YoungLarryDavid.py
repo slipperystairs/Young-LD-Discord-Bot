@@ -223,6 +223,23 @@ async def on_message(message):
                                   '+gucci\n' + '+nas\n' + '+e40\n' '+snoop\n' + '+triple6\n' + '+pat\n' + '+wutang\n' + '+biggie\n' + '+droctagon\n' + '+eminem\n' + '+gibbs\n' + '+bigl\n' + '+outkast\n' + '+random \n'
                                    + '+top10\n' +  '+producers\n' + '+spit' + '```\n')
 
+"""
+FIX THIS SHIT LATER
+@client.command()
+async def info(ctx):
+    embed = discord.Embed(title="Young Larry David", description="I spit hot fire.", color=0xeee657)
+
+    # give info about you here
+    embed.add_field(name="Author", value="SnoopFrogg")
+
+    # Shows the number of servers the bot is member of.
+    embed.add_field(name="Server count", value=f"{len(client.guilds)}")
+
+    # give users a link to invite this bot to their server
+    embed.add_field(name="Invite", value="[Invite link](<insert your OAuth invitation link here>)")
+
+    await ctx.send(embed=embed)
+"""
 client.remove_command('help')
 
 @client.command()
