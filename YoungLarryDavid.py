@@ -217,14 +217,12 @@ async def on_message(message):
 
     if message.content.upper().startswith('+SPIT'):
         await client.send_message(message.channel, spit_game())
-
+"""
     if message.content.upper().startswith('+HELP'):
         await client.send_message(message.channel,'```\n' 'Command List\n' + '+kanye\n' +
                                   '+gucci\n' + '+nas\n' + '+e40\n' '+snoop\n' + '+triple6\n' + '+pat\n' + '+wutang\n' + '+biggie\n' + '+droctagon\n' + '+eminem\n' + '+gibbs\n' + '+bigl\n' + '+outkast\n' + '+random \n'
                                    + '+top10\n' +  '+producers\n' + '+spit' + '```\n')
-
 """
-FIX THIS SHIT LATER
 @client.command()
 async def info(ctx):
     embed = discord.Embed(title="Young Larry David", description="I spit hot fire.", color=0xeee657)
@@ -236,13 +234,13 @@ async def info(ctx):
     embed.add_field(name="Server count", value=f"{len(client.guilds)}")
 
     # give users a link to invite this bot to their server
-    embed.add_field(name="Invite", value="[Invite link](<insert your OAuth invitation link here>)")
+    embed.add_field(name="Invite", value='INVITE')
 
     await ctx.send(embed=embed)
-"""
+
 client.remove_command('help')
 
-@client.command(pass_context=True)
+@client.command()
 async def help(ctx):
     embed = discord.Embed(title="Young Larry David", description="I spit hot fire List of commands are:", color=0xeee657)
 
