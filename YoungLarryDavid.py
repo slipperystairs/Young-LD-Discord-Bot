@@ -112,6 +112,7 @@ async def on_ready():
     print("It's Gucci Time!")
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
+
 @client.command()
 async def info(ctx):
     embed = discord.Embed(title="Young Larry David", description="I spit hot fire.", color=0xeee657)
@@ -152,6 +153,7 @@ async def help(ctx):
     embed.add_field(name="+random", value="Displays random lyrics from a bunch of different artist.", inline=False)
     embed.add_field(name="+spit", value="Uses a Markov chain to combine lyrics and comes up with some funky shit.", inline=False)
     embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
+    embed.add_field(name="+info", value="Gives information about the Young LD", inline=False)
 
     await ctx.send(embed=embed)
 
