@@ -242,7 +242,7 @@ async def info(ctx):
 """
 client.remove_command('help')
 
-@client.command()
+@client.command(pass_context=True)
 async def help(ctx):
     embed = discord.Embed(title="Young Larry David", description="I spit hot fire List of commands are:", color=0xeee657)
 
