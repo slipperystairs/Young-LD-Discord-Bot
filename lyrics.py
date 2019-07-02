@@ -1,4 +1,13 @@
-# I NEED TO REMOVE ALL THE CLUTTER FROM THESE LYRICS...
+"""    
+    TODO
+    List of potential artist
+     - Kendrick
+     - Trick Daddy
+        - add to random
+     - Tupac
+    Hip-Hop Facts
+    
+"""
 kanye_lyrics = [
     'The same people that tried to blackball me forgot about two things: my black balls',
     'What’s a black Beatle anyway? A fucking roach? I guess that’s why they got me sitting in fucking coach',
