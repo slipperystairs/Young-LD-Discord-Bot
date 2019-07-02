@@ -8,6 +8,7 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 from collections import defaultdict
 
+# I NEED TO REMOVE ALL THE CLUTTER FROM THESE LYRICS...
 kanye_lyrics = [
     'The same people that tried to blackball me forgot about two things: my black balls',
     'What’s a black Beatle anyway? A fucking roach? I guess that’s why they got me sitting in fucking coach',
@@ -379,7 +380,6 @@ big_L_lyrics = [
 
 BOT_PREFIX = ("+")
 
-
 client = Bot(command_prefix=BOT_PREFIX)
 markov = defaultdict(lambda: defaultdict(int))
 
@@ -476,25 +476,12 @@ def spit_game():
     # the result is an array so just make it a string
     return ' '.join(result) + '.'
 
-"""
-def convert(temp, unit):
-    unit = unit.lower()
-
-    if unit == 'c':
-        temp = 9.0 / 5.0 * temp + 32
-        return "%s F"% temp
-    if unit == 'f':
-        temp = (temp - 32) / 9.0 * 5.0
-        return "%s C"% temp
-"""
-
 @client.event
 async def on_ready():
     print("It's Gucci Time!")
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
 
-"""
 # Sends a message to a new member that joins the discord server.
 @client.event
 async def on_member_join(member):
@@ -502,15 +489,14 @@ async def on_member_join(member):
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
 
-    
+"""    
     TODO
     List of potential artist
      - Kendrick
      - Trick Daddy
         - add to random
      - Tupac
-    Hip-Hop Facts
-    
+    Hip-Hop Facts   
 """
 @client.event
 async def on_message(message):
@@ -619,34 +605,46 @@ async def on_message(message):
 FIX THIS SHIT LATER
 @client.command()
 async def info(ctx):
-    embed = discord.Embed(title="nice bot", description="Nicest bot there is ever.", color=0xeee657)
+    embed = discord.Embed(title="Young Larry David", description="I spit hot fire.", color=0xeee657)
 
     # give info about you here
-    embed.add_field(name="Author", value="<YOUR-USERNAME>")
+    embed.add_field(name="Author", value="SnoopFrogg")
 
     # Shows the number of servers the bot is member of.
     embed.add_field(name="Server count", value=f"{len(client.guilds)}")
 
-    # give users a link to invite thsi bot to their server
+    # give users a link to invite this bot to their server
     embed.add_field(name="Invite", value="[Invite link](<insert your OAuth invitation link here>)")
 
     await ctx.send(embed=embed)
-
+"""
 client.remove_command('help')
 
 @client.command()
 async def help(ctx):
-    embed = discord.Embed(title="nice bot", description="A Very Nice bot. List of commands are:", color=0xeee657)
+    embed = discord.Embed(title="Young Larry David", description="I spit hot fire List of commands are:", color=0xeee657)
 
-    embed.add_field(name="$add X Y", value="Gives the addition of **X** and **Y**", inline=False)
-    embed.add_field(name="$multiply X Y", value="Gives the multiplication of **X** and **Y**", inline=False)
-    embed.add_field(name="$greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="$cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
-    embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
-    embed.add_field(name="$help", value="Gives this message", inline=False)
+    embed.add_field(name="+kanye", value="Displays random lyrics from the greatest artist of our generation.", inline=False)
+    embed.add_field(name="+gucci", value="Displays lyrics by Guwop AKA El Gato the Human Glacier.", inline=False)
+    embed.add_field(name="+nas", value="Displays random lyrics from the greatest album of all time, Illmatic.", inline=False)
+    embed.add_field(name="+e40", value="Displays random lyrics by E40 AKA Charlie Hustle.", inline=False)
+    embed.add_field(name="+snoop", value="Displays random lyrics by the Dogg Father.", inline=False)
+    embed.add_field(name="+triple6", value="Displays random lyrics by Three 6 Mafia.", inline=False)
+    embed.add_field(name="+pat", value="Displays random lyrics by Project Pat.", inline=False)
+    embed.add_field(name="+wutang", value="Wu-Tang is for the the children.", inline=False)
+    embed.add_field(name="+bigge", value="Displays random lyrics by the black Frank White.", inline=False)
+    embed.add_field(name="+droctagon", value="Displays random lyrics by Dr.Octagon AKA the Dr.Octagonecologyst.", inline=False)
+    embed.add_field(name="+eminem", value="Displays random lyrics by Eminem.", inline=False)
+    embed.add_field(name="+gibbs", value="Displays random lyrics by Gangsta Gibbs.", inline=False)
+    embed.add_field(name="+bigl", value="Displays random lyrics by Big L.", inline=False)
+    embed.add_field(name="+outkast", value="Displays random lyrics by Outkast.", inline=False)
+    embed.add_field(name="+top10", value="Young LD displays his top 10 list of the best Hip-Hop artist of all time.", inline=False)
+    embed.add_field(name="+producers", value="Young LD displays his top 10 list of the best Hip-Hop producers of all time.", inline=False)
+    embed.add_field(name="+random", value="Displays random lyrics from a bunch of different artist.", inline=False)
+    embed.add_field(name="+spit", value="Uses a Markov chain to combine lyrics and comes up with some funky shit.", inline=False)
+    embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
 
     await ctx.send(embed=embed)
-"""
 
 async def list_server():
     await client.wait_until_ready()
@@ -657,5 +655,4 @@ async def list_server():
         await asyncio.sleep(600)
 
 client.loop.create_task(list_server())
-#client.run(TOKEN)
 client.run(os.getenv('TOKEN'))
