@@ -114,20 +114,15 @@ async def on_ready():
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
 
-# Sends a message to a new member that joins the discord server.
-@client.event
-async def on_member_join(member):
-    await client.send_message(member, "Sup!? It's ya boy Young LD, and my sole purpose in this world is to provide you and your crew with some dank, absurd, hard hittin' rap lyrics.\n" 
-    "For a list of all available commands, use the +help command.\n"
-    "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
-
 @client.command(pass_context=True)
 async def help(ctx):
     author=ctx.message.author
     
     embed=discord.Embed(
-        color=discord.Color.blue()
+        color=discord.Color.orange()
     )
+    embed.set_author(name='Help')
+    
     embed.add_field(name="+kanye", value="Displays random lyrics from the greatest artist of our generation.", inline=False)
     embed.add_field(name="+gucci", value="Displays lyrics by Guwop AKA El Gato the Human Glacier.", inline=False)
     embed.add_field(name="+nas", value="Displays random lyrics from the greatest album of all time, Illmatic.", inline=False)
@@ -149,6 +144,13 @@ async def help(ctx):
     embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
     
     await client.send_message(author, embed=embed)
+
+# Sends a message to a new member that joins the discord server.
+@client.event
+async def on_member_join(member):
+    await client.send_message(member, "Sup!? It's ya boy Young LD, and my sole purpose in this world is to provide you and your crew with some dank, absurd, hard hittin' rap lyrics.\n" 
+    "For a list of all available commands, use the +help command.\n"
+    "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
 
 @client.event
 async def on_message(message):
