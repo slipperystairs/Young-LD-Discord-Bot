@@ -27,7 +27,7 @@ async def on_member_join(member):
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
 
-@client.command(pass_ctx=True)
+@client.command(pass_ctx=Tr)
 async def kanye(ctx):
     kanye_lyrics = [
     'The same people that tried to blackball me forgot about two things: my black balls',
@@ -43,7 +43,7 @@ async def kanye(ctx):
     'Now, if I fuck this model.\n' + 'And she just bleached her asshole\n' +
     'And I get bleach on my T-shirt\n' + 'I\'ma feel like an asshole'
     ]
-    await client.say(random.choice(kanye_lyrics))
+    await ctx.send_message(random.choice(kanye_lyrics))
     
 """       
 @client.event
