@@ -122,23 +122,23 @@ async def on_member_join(member):
      
 @client.command()
 async def kanye(ctx):
-    await ctx.send_message(ctx.channel, random.choice(lyrics.kanye_lyrics))
+    await ctx.send(ctx.channel, random.choice(lyrics.kanye_lyrics))
 
 @client.command()
 async def gucci(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.gucci_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.gucci_lyrics))
 
 @client.command()
 async def random(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.random_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.random_lyrics))
 
 @client.command()
 async def nas(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.nas_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.nas_lyrics))
 
 @client.command()
 async def e40(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.E40_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.E40_lyrics))
 
 @client.command()
 async def snoop(ctx):
@@ -158,27 +158,27 @@ async def wutang(ctx):
 
 @client.command()
 async def biggie(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.biggie_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.biggie_lyrics))
 
 @client.command()
 async def droctagon(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.doc_oct_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.doc_oct_lyrics))
 
 @client.command()
 async def eminem(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.eminem_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.eminem_lyrics))
 
 @client.command()
 async def gibbs(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.freddie_gibbs_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.freddie_gibbs_lyrics))
 
 @client.command()
 async def bigl(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.big_L_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.big_L_lyrics))
 
 @client.command()
 async def outkast(ctx):
-    await ctx.send_message(ctx.channel, random.choices(lyrics.outkast_lyrics))
+    await ctx.send(ctx.channel, random.choices(lyrics.outkast_lyrics))
 
 async def list_server():
     await client.wait_until_ready()
