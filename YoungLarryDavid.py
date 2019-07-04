@@ -491,8 +491,8 @@ async def on_member_join(member):
      
 @client.command()
 async def kanye(ctx):
-    await ctx.send_message(ctx.channel, random.choice(kanye_lyrics))
-
+    await ctx.send(random.choice(kanye_lyrics))
+"""
 @client.command()
 async def gucci(ctx):
     await ctx.send_message(ctx.channel, random.choice(gucci_lyrics))
@@ -548,6 +548,7 @@ async def bigl(ctx):
 @client.command()
 async def outkast(ctx):
     await ctx.send_message(ctx.channel, random.choice(outkast_lyrics))
+"""
 
 @client.command()
 async def info(ctx):
