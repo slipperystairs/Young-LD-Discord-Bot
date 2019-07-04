@@ -491,64 +491,63 @@ async def on_member_join(member):
      
 @client.command()
 async def kanye(ctx):
-    await client.send_message(ctx.channel, random.choice(kanye_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(kanye_lyrics))
 
 @client.command()
 async def gucci(ctx):
-    await client.send(ctx.channel, random.choice(lyrics.gucci_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(gucci_lyrics))
 
 @client.command()
 async def random(ctx):
-    await client.send(ctx.channel, random.choice(lyrics.random_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(random_lyrics))
 
 @client.command()
 async def nas(ctx):
-    await client.send(ctx.channel, random.choice(lyrics.nas_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(nas_lyrics))
 
 @client.command()
 async def e40(ctx):
-    await client.send(ctx.channel, random.choice(lyrics.E40_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(E40_lyrics))
 
 @client.command()
 async def snoop(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.snoop_dogg_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(snoop_dogg_lyrics))
 
 @client.command()
 async def triple6(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.three_six_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(three_six_lyrics))
 
 @client.command()
 async def pat(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.project_pat_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(project_pat_lyrics))
 
 @client.command()
 async def wutang(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.wu_tang_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(wu_tang_lyrics))
 
 @client.command()
 async def biggie(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.biggie_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(biggie_lyrics))
 
 @client.command()
 async def droctagon(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.doc_oct_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(doc_oct_lyrics))
 
 @client.command()
 async def eminem(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.eminem_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(eminem_lyrics))
 
 @client.command()
 async def gibbs(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.freddie_gibbs_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(freddie_gibbs_lyrics))
 
 @client.command()
 async def bigl(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.big_L_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(big_L_lyrics))
 
 @client.command()
 async def outkast(ctx):
-    await client.send_message(ctx.channel, random.choice(lyrics.outkast_lyrics))
-
+    await ctx.send_message(ctx.channel, random.choice(outkast_lyrics))
 
 @client.command()
 async def info(ctx):
