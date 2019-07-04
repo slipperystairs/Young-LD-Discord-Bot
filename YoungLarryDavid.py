@@ -119,7 +119,12 @@ async def on_member_join(member):
     await client.send_message(member, "Sup!? It's ya boy Young LD, and my sole purpose in this world is to provide you and your crew with some dank, absurd, hard hittin' rap lyrics.\n" 
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
-       
+
+@client.command()
+async def kanye(ctx):
+    await ctx.send_message(ctx.channel, random.choice(lyrics.kanye_lyrics))
+    
+"""       
 @client.event
 async def on_message(message):
     # Don't need the bot to reply to itself.
@@ -222,6 +227,7 @@ async def on_message(message):
         await client.send_message(message.channel,'```\n' 'Command List\n' + '+kanye\n' +
                                   '+gucci\n' + '+nas\n' + '+e40\n' '+snoop\n' + '+triple6\n' + '+pat\n' + '+wutang\n' + '+biggie\n' + '+droctagon\n' + '+eminem\n' + '+gibbs\n' + '+bigl\n' + '+outkast\n' + '+random \n'
                                    + '+top10\n' +  '+producers\n' + '+spit' + '```\n')
+"""
 
 async def list_server():
     await client.wait_until_ready()
