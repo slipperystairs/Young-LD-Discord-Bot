@@ -27,7 +27,7 @@ async def on_member_join(member):
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
 
-@client.command()
+@client.command(pass_ctx=True)
 async def kanye(ctx):
     kanye_lyrics = [
     'The same people that tried to blackball me forgot about two things: my black balls',
