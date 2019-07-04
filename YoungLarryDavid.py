@@ -136,7 +136,7 @@ async def kanye(ctx):
     'Now, if I fuck this model.\n' + 'And she just bleached her asshole\n' +
     'And I get bleach on my T-shirt\n' + 'I\'ma feel like an asshole'
     ]
-    await ctx.send(random.choice(kanye_lyrics))
+    await ctx.send_message(ctx.channel, random.choice(kanye_lyrics))
     
 """       
 @client.event
