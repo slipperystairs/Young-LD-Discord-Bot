@@ -114,37 +114,6 @@ async def on_ready():
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
 
-@client.command(pass_context=True)
-async def help(ctx):
-    author=ctx.message.author
-    
-    embed=discord.Embed(
-        color=discord.Color.orange()
-    )
-    embed.set_author(name='Help')
-    
-    embed.add_field(name="+kanye", value="Displays random lyrics from the greatest artist of our generation.", inline=False)
-    embed.add_field(name="+gucci", value="Displays lyrics by Guwop AKA El Gato the Human Glacier.", inline=False)
-    embed.add_field(name="+nas", value="Displays random lyrics from the greatest album of all time, Illmatic.", inline=False)
-    embed.add_field(name="+e40", value="Displays random lyrics by E40 AKA Charlie Hustle.", inline=False)
-    embed.add_field(name="+snoop", value="Displays random lyrics by the Dogg Father.", inline=False)
-    embed.add_field(name="+triple6", value="Displays random lyrics by Three 6 Mafia.", inline=False)
-    embed.add_field(name="+pat", value="Displays random lyrics by Project Pat.", inline=False)
-    embed.add_field(name="+wutang", value="Wu-Tang is for the the children.", inline=False)
-    embed.add_field(name="+bigge", value="Displays random lyrics by the black Frank White.", inline=False)
-    embed.add_field(name="+droctagon", value="Displays random lyrics by Dr.Octagon AKA the Dr.Octagonecologyst.", inline=False)
-    embed.add_field(name="+eminem", value="Displays random lyrics by Eminem.", inline=False)
-    embed.add_field(name="+gibbs", value="Displays random lyrics by Gangsta Gibbs.", inline=False)
-    embed.add_field(name="+bigl", value="Displays random lyrics by Big L.", inline=False)
-    embed.add_field(name="+outkast", value="Displays random lyrics by Outkast.", inline=False)
-    embed.add_field(name="+top10", value="Young LD displays his top 10 list of the best Hip-Hop artist of all time.", inline=False)
-    embed.add_field(name="+producers", value="Young LD displays his top 10 list of the best Hip-Hop producers of all time.", inline=False)
-    embed.add_field(name="+random", value="Displays random lyrics from a bunch of different artist.", inline=False)
-    embed.add_field(name="+spit", value="Uses a Markov chain to combine lyrics and comes up with some funky shit.", inline=False)
-    embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
-    
-    await client.send_message(author, embed=embed)
-
 # Sends a message to a new member that joins the discord server.
 @client.event
 async def on_member_join(member):
@@ -249,6 +218,37 @@ async def on_message(message):
 
     if message.content.upper().startswith('+SPIT'):
         await client.send_message(message.channel, spit_game())
+
+@client.command(pass_context=True)
+async def help(ctx):
+    author=ctx.message.author
+    
+    embed=discord.Embed(
+        color=discord.Color.orange()
+    )
+    embed.set_author(name='Help')
+    
+    embed.add_field(name="+kanye", value="Displays random lyrics from the greatest artist of our generation.", inline=False)
+    embed.add_field(name="+gucci", value="Displays lyrics by Guwop AKA El Gato the Human Glacier.", inline=False)
+    embed.add_field(name="+nas", value="Displays random lyrics from the greatest album of all time, Illmatic.", inline=False)
+    embed.add_field(name="+e40", value="Displays random lyrics by E40 AKA Charlie Hustle.", inline=False)
+    embed.add_field(name="+snoop", value="Displays random lyrics by the Dogg Father.", inline=False)
+    embed.add_field(name="+triple6", value="Displays random lyrics by Three 6 Mafia.", inline=False)
+    embed.add_field(name="+pat", value="Displays random lyrics by Project Pat.", inline=False)
+    embed.add_field(name="+wutang", value="Wu-Tang is for the the children.", inline=False)
+    embed.add_field(name="+bigge", value="Displays random lyrics by the black Frank White.", inline=False)
+    embed.add_field(name="+droctagon", value="Displays random lyrics by Dr.Octagon AKA the Dr.Octagonecologyst.", inline=False)
+    embed.add_field(name="+eminem", value="Displays random lyrics by Eminem.", inline=False)
+    embed.add_field(name="+gibbs", value="Displays random lyrics by Gangsta Gibbs.", inline=False)
+    embed.add_field(name="+bigl", value="Displays random lyrics by Big L.", inline=False)
+    embed.add_field(name="+outkast", value="Displays random lyrics by Outkast.", inline=False)
+    embed.add_field(name="+top10", value="Young LD displays his top 10 list of the best Hip-Hop artist of all time.", inline=False)
+    embed.add_field(name="+producers", value="Young LD displays his top 10 list of the best Hip-Hop producers of all time.", inline=False)
+    embed.add_field(name="+random", value="Displays random lyrics from a bunch of different artist.", inline=False)
+    embed.add_field(name="+spit", value="Uses a Markov chain to combine lyrics and comes up with some funky shit.", inline=False)
+    embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
+    
+    await client.send_message(author, embed=embed)
 
 async def list_server():
     await client.wait_until_ready()
