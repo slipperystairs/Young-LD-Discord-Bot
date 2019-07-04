@@ -217,7 +217,7 @@ async def on_message(message):
 
     if message.content.upper().startswith('+SPIT'):
         await client.send_message(message.channel, spit_game())
-
+    
     if message.content.upper().startswith('+HELP'):
         commands={}
         commands['+help']='Young LD Displays the list of command that can be used.'
@@ -240,11 +240,11 @@ async def on_message(message):
         commands['+random']='Displays random lyrics from a bunch of different artist.'
         commands['+spit']='Uses a Markov chain to combine lyrics and comes up with some funky shit.'
 
-	msg=discord.Embed(title='Young Larry David', description="Written by SnoopFrogg!",color=0x0000ff)
-	for command,description in commands.items():
-		msg.add_field(name=command,value=description, inline=False)
-	#msg.add_field(name='Join our Discord/For Questions/Chilling',value='', inline=False)
-	await client.send_message(message.channel, embed=msg)
+        msg=discord.Embed(title='Young Larry David', description='Written by SnoopFrogg', color=0x0000ff)
+        for command, description in commands.items():
+            msg.add_field(name=command, value=description, inline=False)
+        
+        await client.send_message(message.channel, embed=msg)
 
 async def list_server():
     await client.wait_until_ready()
