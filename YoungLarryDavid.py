@@ -244,7 +244,7 @@ async def on_message(message):
         msg=discord.Embed(title='Young Larry David', description='Written by SnoopFrogg', color=0x0000ff)
         for command, description in commands.items():
             msg.add_field(name=command, value=description, inline=False)
-        
+        #msg.add_field(name='Join our Discord/For Questions/Chilling', value='', inline=False)
         await client.send_message(message.channel, embed=msg)
 
 async def list_server():
