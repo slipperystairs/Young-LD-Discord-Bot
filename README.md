@@ -13,8 +13,8 @@ Shoutout to https://github.com/sskiswani for helping me out with the text genera
 +help Displays the list of commands.
 +kanye Displays random lyrics from the greatest artist of our generation.
 +gucci Displays lyrics by Guwop AKA El Gato the Human Glacier.
-+nas Displays lyrics from the greatest album of all time Illmatic.
-+e40 Displays lyrics by E40 AKA Charlie Hustle.
++nas Displays random lyrics by E40 AKA Charlie Hustle.
++e40 Displays lyrics from the greatest album of all time Illmatic.
 +snoop Displays lyrics by the Dogg Father.
 +triple6 Displays lyrics by Three 6 Mafia.
 +pat Displays lyrics by Project Pat.
