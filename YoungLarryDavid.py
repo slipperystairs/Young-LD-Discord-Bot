@@ -122,7 +122,7 @@ async def on_member_join(member):
 
 @client.command()
 async def kanye(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.kanye_lyrics))
+    await ctx.send(f'Answer: {random.choice(lyrics.kanye_lyrics)}')
     
 """       
 @client.event
