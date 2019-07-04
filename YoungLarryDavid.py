@@ -119,7 +119,34 @@ async def on_member_join(member):
     await client.send_message(member, "Sup!? It's ya boy Young LD, and my sole purpose in this world is to provide you and your crew with some dank, absurd, hard hittin' rap lyrics.\n" 
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
-     
+
+@client.command(pass_context=True)
+async def help(ctx):
+    embed=ctx.message.author
+    
+    embed=discord.Embed(
+        color=discord.Color.blue()
+    )
+    embed.add_field(name="+kanye", value="Displays random lyrics from the greatest artist of our generation.", inline=False)
+    embed.add_field(name="+gucci", value="Displays lyrics by Guwop AKA El Gato the Human Glacier.", inline=False)
+    embed.add_field(name="+nas", value="Displays random lyrics from the greatest album of all time, Illmatic.", inline=False)
+    embed.add_field(name="+e40", value="Displays random lyrics by E40 AKA Charlie Hustle.", inline=False)
+    embed.add_field(name="+snoop", value="Displays random lyrics by the Dogg Father.", inline=False)
+    embed.add_field(name="+triple6", value="Displays random lyrics by Three 6 Mafia.", inline=False)
+    embed.add_field(name="+pat", value="Displays random lyrics by Project Pat.", inline=False)
+    embed.add_field(name="+wutang", value="Wu-Tang is for the the children.", inline=False)
+    embed.add_field(name="+bigge", value="Displays random lyrics by the black Frank White.", inline=False)
+    embed.add_field(name="+droctagon", value="Displays random lyrics by Dr.Octagon AKA the Dr.Octagonecologyst.", inline=False)
+    embed.add_field(name="+eminem", value="Displays random lyrics by Eminem.", inline=False)
+    embed.add_field(name="+gibbs", value="Displays random lyrics by Gangsta Gibbs.", inline=False)
+    embed.add_field(name="+bigl", value="Displays random lyrics by Big L.", inline=False)
+    embed.add_field(name="+outkast", value="Displays random lyrics by Outkast.", inline=False)
+    embed.add_field(name="+top10", value="Young LD displays his top 10 list of the best Hip-Hop artist of all time.", inline=False)
+    embed.add_field(name="+producers", value="Young LD displays his top 10 list of the best Hip-Hop producers of all time.", inline=False)
+    embed.add_field(name="+random", value="Displays random lyrics from a bunch of different artist.", inline=False)
+    embed.add_field(name="+spit", value="Uses a Markov chain to combine lyrics and comes up with some funky shit.", inline=False)
+    embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
+
 @client.event
 async def on_message(message):
     # Don't need the bot to reply to itself.
