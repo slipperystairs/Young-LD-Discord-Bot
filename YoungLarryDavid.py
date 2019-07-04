@@ -219,11 +219,6 @@ async def on_message(message):
     if message.content.upper().startswith('+SPIT'):
         await client.send_message(message.channel, spit_game())
 
-    if message.content.upper().startswith('+HELP'):
-        await client.send_message(message.channel,'```\n' 'Command List\n' + '+kanye\n' +
-                                  '+gucci\n' + '+nas\n' + '+e40\n' '+snoop\n' + '+triple6\n' + '+pat\n' + '+wutang\n' + '+biggie\n' + '+droctagon\n' + '+eminem\n' + '+gibbs\n' + '+bigl\n' + '+outkast\n' + '+random \n'
-                                   + '+top10\n' +  '+producers\n' + '+spit' + '```\n')
-
 @client.command(pass_context=True)
 async def help(ctx):
     author=ctx.message.author
