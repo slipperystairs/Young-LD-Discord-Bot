@@ -215,7 +215,8 @@ async def on_message(message):
                                   "8. Sounwave\n"
                                   "9. Q-Tip\n"
                                   "10. Kanye West")
-
+    
+    # Uses markov chain to generate random lyrics
     if message.content.upper().startswith('+SPIT'):
         await client.send_message(message.channel, spit_game())
     
