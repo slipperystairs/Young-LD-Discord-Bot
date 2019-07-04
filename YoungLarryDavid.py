@@ -489,7 +489,7 @@ async def on_member_join(member):
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
      
-@client.command(aliases=['kanye', 'KANYE'])
+@client.command()
 async def kanye(ctx):
     await client.send_message(ctx.channel, random.choice(kanye_lyrics))
 
@@ -499,55 +499,99 @@ async def gucci(ctx):
 
 @client.command()
 async def random(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.random_lyrics))
+    await client.send(ctx.channel, random.choice(lyrics.random_lyrics))
 
 @client.command()
 async def nas(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.nas_lyrics))
+    await client.send(ctx.channel, random.choice(lyrics.nas_lyrics))
 
 @client.command()
 async def e40(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.E40_lyrics))
+    await client.send(ctx.channel, random.choice(lyrics.E40_lyrics))
 
 @client.command()
 async def snoop(ctx):
-    await ctx.send_message(ctx.channel, random.choice(lyrics.snoop_dogg_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.snoop_dogg_lyrics))
 
 @client.command()
 async def triple6(ctx):
-    await ctx.send_message(ctx.channel, random.choice(lyrics.three_six_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.three_six_lyrics))
 
 @client.command()
 async def pat(ctx):
-    await ctx.send_message(ctx.channel, random.choice(lyrics.project_pat_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.project_pat_lyrics))
 
 @client.command()
 async def wutang(ctx):
-    await ctx.send_message(ctx.channel, random.choice(lyrics.wu_tang_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.wu_tang_lyrics))
 
 @client.command()
 async def biggie(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.biggie_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.biggie_lyrics))
 
 @client.command()
 async def droctagon(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.doc_oct_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.doc_oct_lyrics))
 
 @client.command()
 async def eminem(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.eminem_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.eminem_lyrics))
 
 @client.command()
 async def gibbs(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.freddie_gibbs_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.freddie_gibbs_lyrics))
 
 @client.command()
 async def bigl(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.big_L_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.big_L_lyrics))
 
 @client.command()
 async def outkast(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.outkast_lyrics))
+    await client.send_message(ctx.channel, random.choice(lyrics.outkast_lyrics))
+
+
+@client.command()
+async def info(ctx):
+    embed = discord.Embed(title="Young Larry David", description="I spit hot fire.", color=0xeee657)
+
+    # give info about you here
+    embed.add_field(name="Author", value="SnoopFrogg")
+
+    # Shows the number of servers the bot is member of.
+    embed.add_field(name="Server count", value=f"{len(client.guilds)}")
+
+    # give users a link to invite this bot to their server
+    embed.add_field(name="Invite", value="[Invite link](<insert your OAuth invitation link here>)")
+
+    await ctx.send(embed=embed)
+
+client.remove_command('help')
+
+@client.command()
+async def help(ctx):
+    embed = discord.Embed(title="Young Larry David", description="I spit hot fire List of commands are:", color=0xeee657)
+
+    embed.add_field(name="+kanye", value="Displays random lyrics from the greatest artist of our generation.", inline=False)
+    embed.add_field(name="+gucci", value="Displays lyrics by Guwop AKA El Gato the Human Glacier.", inline=False)
+    embed.add_field(name="+nas", value="Displays random lyrics from the greatest album of all time, Illmatic.", inline=False)
+    embed.add_field(name="+e40", value="Displays random lyrics by E40 AKA Charlie Hustle.", inline=False)
+    embed.add_field(name="+snoop", value="Displays random lyrics by the Dogg Father.", inline=False)
+    embed.add_field(name="+triple6", value="Displays random lyrics by Three 6 Mafia.", inline=False)
+    embed.add_field(name="+pat", value="Displays random lyrics by Project Pat.", inline=False)
+    embed.add_field(name="+wutang", value="Wu-Tang is for the the children.", inline=False)
+    embed.add_field(name="+bigge", value="Displays random lyrics by the black Frank White.", inline=False)
+    embed.add_field(name="+droctagon", value="Displays random lyrics by Dr.Octagon AKA the Dr.Octagonecologyst.", inline=False)
+    embed.add_field(name="+eminem", value="Displays random lyrics by Eminem.", inline=False)
+    embed.add_field(name="+gibbs", value="Displays random lyrics by Gangsta Gibbs.", inline=False)
+    embed.add_field(name="+bigl", value="Displays random lyrics by Big L.", inline=False)
+    embed.add_field(name="+outkast", value="Displays random lyrics by Outkast.", inline=False)
+    embed.add_field(name="+top10", value="Young LD displays his top 10 list of the best Hip-Hop artist of all time.", inline=False)
+    embed.add_field(name="+producers", value="Young LD displays his top 10 list of the best Hip-Hop producers of all time.", inline=False)
+    embed.add_field(name="+random", value="Displays random lyrics from a bunch of different artist.", inline=False)
+    embed.add_field(name="+spit", value="Uses a Markov chain to combine lyrics and comes up with some funky shit.", inline=False)
+    embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
+
+    await ctx.send(embed=embed)
 
 async def list_server():
     await client.wait_until_ready()
