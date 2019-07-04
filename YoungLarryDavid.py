@@ -218,6 +218,7 @@ async def on_message(message):
     if message.content.upper().startswith('+SPIT'):
         await client.send_message(message.channel, spit_game())
     
+    # Displays commands for the user
     if message.content.upper().startswith('+HELP'):
         commands={}
         commands['+help']='Young LD Displays the list of command that can be used.'
