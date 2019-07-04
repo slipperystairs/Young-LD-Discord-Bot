@@ -120,9 +120,9 @@ async def on_member_join(member):
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
      
-@client.command()
-async def kanye(ctx):
-    await ctx.send(random.choice(lyrics.kanye_lyrics))
+@client.command(aliases=['kanye', 'KANYE'])
+async def kanye(message):
+    await client.send_message(message.channel, (random.choice(lyrics.kanye_lyrics)))
 
 @client.command()
 async def gucci(ctx):
