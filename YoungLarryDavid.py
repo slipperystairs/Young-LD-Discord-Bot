@@ -121,12 +121,12 @@ async def on_member_join(member):
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
      
 @client.command(aliases=['kanye', 'KANYE'])
-async def kanye(message):
-    await client.send_message(message.channel, (random.choice(lyrics.kanye_lyrics)))
+async def kanye(ctx):
+    await client.say(random.choice(lyrics.kanye_lyrics))
 
 @client.command()
 async def gucci(ctx):
-    await ctx.send(ctx.channel, random.choice(lyrics.gucci_lyrics))
+    await client.send(ctx.channel, random.choice(lyrics.gucci_lyrics))
 
 @client.command()
 async def random(ctx):
