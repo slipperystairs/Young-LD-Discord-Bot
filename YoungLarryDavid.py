@@ -247,7 +247,7 @@ async def help(ctx):
     embed.add_field(name='+spit', value='Uses a Markov chain to combine lyrics and comes up with some funky shit.', inline=True)
     embed.add_field(name='+help', value='Young LD Displays the list of command that can be used.', inline=True)
     
-    await ctx.send_message(author, embed=embed)
+    await client.send_message(author,embed=embed)
 
 async def list_server():
     await client.wait_until_ready()
