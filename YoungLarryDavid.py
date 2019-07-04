@@ -157,7 +157,7 @@ async def on_message(message):
 """
 @client.command(pass_context=True)
 async def kanye(ctx):
-    kanye_lyrics = random.choice [
+    kanye_lyrics = random.choice ([
     'The same people that tried to blackball me forgot about two things: my black balls',
     'What’s a black Beatle anyway? A fucking roach? I guess that’s why they got me sitting in fucking coach',
     'Have you ever had sex with a pharaoh? Put the pussy in a sarcophagus. Now she claiming that I bruised her esophagus',
@@ -170,7 +170,7 @@ async def kanye(ctx):
     'Mayonnaise-colored Benz, I push Miracle Whips'
     'Now, if I fuck this model.\n' + 'And she just bleached her asshole\n' +
     'And I get bleach on my T-shirt\n' + 'I\'ma feel like an asshole'
-    ]
+    ])
     await client.say(kanye_lyrics)
 
 async def list_server():
