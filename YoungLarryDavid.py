@@ -21,7 +21,6 @@ def remove_punction(text):
     """
     return text.translate(str.maketrans("", "", string.punctuation))
 
-
 def get_trigrams(data):
     """
     Generates the trigrams of an array of elements. For example, if `data = [a, b, c, d]` then the
