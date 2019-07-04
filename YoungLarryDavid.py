@@ -12,7 +12,7 @@ from collections import defaultdict
 BOT_PREFIX = ("+")
 
 client = Bot(command_prefix=BOT_PREFIX)
-client.remove_command('help')
+#client.remove_command('help')
 markov = defaultdict(lambda: defaultdict(int))
 
 def remove_punction(text):
