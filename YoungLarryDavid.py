@@ -12,6 +12,7 @@ from collections import defaultdict
 BOT_PREFIX = ("+")
 
 client = Bot(command_prefix=BOT_PREFIX)
+client.remove_command('help')
 markov = defaultdict(lambda: defaultdict(int))
 
 def remove_punction(text):
@@ -122,7 +123,7 @@ async def on_member_join(member):
 
 @client.command(pass_context=True)
 async def help(ctx):
-    embed=ctx.message.author
+    author=ctx.message.author
     
     embed=discord.Embed(
         color=discord.Color.blue()
@@ -146,6 +147,8 @@ async def help(ctx):
     embed.add_field(name="+random", value="Displays random lyrics from a bunch of different artist.", inline=False)
     embed.add_field(name="+spit", value="Uses a Markov chain to combine lyrics and comes up with some funky shit.", inline=False)
     embed.add_field(name="+help", value="Young LD Displays the list of command that can be used.", inline=False)
+    
+    await client.send_message(author, embed=embed)
 
 @client.event
 async def on_message(message):
