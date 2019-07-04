@@ -221,7 +221,7 @@ async def on_message(message):
 
 @client.command(pass_context=True)
 async def help(ctx):
-    message=ctx.message.channel
+    author=ctx.message.channel
     
     embed=discord.Embed(
         color=discord.Color.orange()
@@ -248,7 +248,7 @@ async def help(ctx):
     embed.add_field(name='+spit', value='Uses a Markov chain to combine lyrics and comes up with some funky shit.', inline=True)
     embed.add_field(name='+help', value='Young LD Displays the list of command that can be used.', inline=True)
     
-    await client.send_message(message.channel, embed=embed)
+    await client.send_message(embed=embed)
 
 async def list_server():
     await client.wait_until_ready()
