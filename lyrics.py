@@ -1,3 +1,4 @@
+import random
 """    
     TODO
     List of potential artist
@@ -8,7 +9,7 @@
     Hip-Hop Facts
     
 """
-kanye_lyrics = [
+kanye_lyrics = random.choice([
     'The same people that tried to blackball me forgot about two things: my black balls',
     'What’s a black Beatle anyway? A fucking roach? I guess that’s why they got me sitting in fucking coach',
     'Have you ever had sex with a pharaoh? Put the pussy in a sarcophagus. Now she claiming that I bruised her esophagus',
@@ -21,9 +22,9 @@ kanye_lyrics = [
     'Mayonnaise-colored Benz, I push Miracle Whips'
     'Now, if I fuck this model.\n' + 'And she just bleached her asshole\n' +
     'And I get bleach on my T-shirt\n' + 'I\'ma feel like an asshole'
-]
+])
 
-gucci_lyrics = [
+gucci_lyrics = random.choice([
     'Overdose of sauce, no meat, just sauce',
     'I pushed a lot of pills, a lot of peas, a lot of powder, It\'s Gucci Mane La Fleur and jiggalo ya cowards.',
     'Gucci Mane broke; pussy nigga is ya stupid?',
@@ -54,9 +55,9 @@ gucci_lyrics = [
     'Gucci Mane broke; pussy nigga is ya stupid?',
     'Trap boys get bricks, athletes get trophies Gucci mane got cake, it\'s my birthday party Want a sweet 16? Thats two times forty!!',
     'Gucci so flossy, all my broads are bossy. Head til’ I’m nauseous, they keep me exhausted'
-]
+])
 
-random_lyrics = [
+random_lyrics = random.choice([
     'Like a pigeon in the sky, I just shitted on your ride',
     'I’m far from broke, got enough bread And mad hoes, ask Beavis I get nothing Butthead',
     'I jumped out the Lincoln, left him stinkin. Put his brains in the street. Now you can see what he was just thinkin',
@@ -77,9 +78,9 @@ random_lyrics = [
     'I\'m trapping like a fool, 30 inches on the Hummer ride\nMad \'cause I killed your buddy and I beat the homicide',
     'Young Juiceman whip more chickens than Popeye\'s\nBouldercrest working and I\'m still whipping cream pies',
     'Matter of fact, nigga, just call me when you need some dope'
-]
+])
 
-nas_lyrics = [
+nas_lyrics = random.choice([
     'Rappers, I monkey flip \'em with the funky rhythm I be kickin\'\nMusician inflictin\' composition of pain\nI\'m like Scarface sniffin\' cocaine\nHoldin\' an M16, see with the pen I\'m extreme',
     'It drops deep as it does in my breath\nI never sleep—cause sleep is the cousin of death\nBeyond the walls of intelligence, life is defined.\nI think of crime when I\'m in a New York state of mind',
     'I sip the Dom P, watchin\' Gandhi \'til I\'m charged, then\nWritin\' in my book of rhymes, all the words past the margin.\nBehold the mic I\'m throbbin\', mechanical movement\nUnderstandable smooth shit that murderers move with\nThe thief\'s theme, play me at night, they won\'t act right',
@@ -91,9 +92,9 @@ nas_lyrics = [
     'Nas is like the Afrocentric Asian: half-man, half-amazin\'\n‘Cause in my physical I can express through song\nDelete stress like Motrin, then extend strong\nI drink Moët with Medusa, give her shotguns in Hell\nFrom the spliff that I lift and inhale; it ain\'t hard to tell',
     'This rhythmatic explosion\nIs what your frame of mind has chosen\nI\'ll leave your brain stimulated, niggas is frozen\nSpeak with criminal slang, begin like a violin\nEnd like Leviathan,it\'s deep? Well, let me try again',
     'My poetry\'s deep, I never fell\nNas\'raps should be locked in a cell; it ain\'t hard to tell'
-]
+])
 
-E40_lyrics = [
+E40_lyrics = random.choice([
     'Ever told on a nigga? (nope)\nEver squeezed a trigger? (yup)',
     'Ever set a nigga up? (nope)\nEver helped a brother out when he was down on his luck? (yup)',
     'You a sap? (nope)\nYou a boss player, you a mack? (yup)',
@@ -113,9 +114,9 @@ E40_lyrics = [
     'You eat booty? (mmm mmm)\nYou lick coochie? (uh huh)\nBiatch!',
     'Divorced from the streets? (mmm mmm)\nBe in Dubai with the sheiks? (uh huh)',
     'Pan handlin\'? (mmm mmm)\nShippin\' and handlin\'? (uh huh)'
-]
+])
 
-snoop_dogg_lyrics = [
+snoop_dogg_lyrics = random.choice([
     'He fucked the fleas off a bitch.\nHe shaked the ticks off his dick.\nAnd in the booty, he buries his motherfuckin\' bone.\nAnd if there\'s any left over\nHe\'ll roll over and take a doggy bag home',
     'Shit, I got a pocket full of rubbers and my homeboys do too\nSo turn off the lights and close the doors\nBut (but what?) we don\'t love them hoes, yeah\nSo we gon\' smoke a ounce to this\nG\'s up, hoes down, while you motherfuckers bounce to this.',
     '‘Cause when I bust my nut I\'m raising up off the cot\nDon\'t get upset, girl, that\'s just how it goes\nI don\'t love you, hoes, I\'m out the door, and I\'ll be...',
@@ -127,9 +128,9 @@ snoop_dogg_lyrics = [
     'So I ain\'t holdin nuttin\' back\nAnd motherfucker, I got five on that twenty sack\nIt\'s like that and as a matter of fact (rat-tat-tat-tat)\n\'Cause I never hesitate to put a nigga on his back',
     'Yeah roll up the dank, and pour the drank\nAnd watch your step (why?) \'cause Doggy\'s on the gank',
     'Layin that, playin that G Thang\nShe want the nigga with the biggest nuts, and guess what?\nHe is I, and I am him, slim with the tilted brim\nWhat\'s my motherfuckin name?'
-]
+])
 
-three_six_lyrics = [
+three_six_lyrics = random.choice([
     'Bitch don\'t play dumb\nStick out your tongue\nAnd let me take a plunge\nFor plenty you don\'t have to suck your thumb\nI got yum-yum',
     'Slob on my knob\nLike corn on the cob\nCheck in with me\nAnd do your job\nlay on the bed\nAnd give me head\nDon\'t have to ask\nDon\'t have to beg',
     'These bitches got me goin\'\nThe feelin\' of a warm mouth\nMan I tell you bout\' these hoes chewin\' in the South',
@@ -149,9 +150,9 @@ three_six_lyrics = [
     'Cocaine Blaine that\'s my dog\nI called him up to house this slut\nWe gon\' fuck her in the back of da\' bus\nAnd fill her nose up full o\' dat\' dust',
     'In da\' bathroom \'bout two whole hours\nGettin\' real high passed out on the floor\nFuck that shit niggas\' on the frame\nTake \'em 1 on 1 back in the game',
     'Used to be my nigga\nNow you fake\nBut I stomp on you trick in the grass\nYou little snake bitch'
-]
+])
 
-project_pat_lyrics =[
+project_pat_lyrics = random.choice([
     'I ain\'t goin\' back to jail, I ain\'t goin\' back to jail\nI got mo\' pussy to swell, and mo\' dreams to tell',
     'Bullets do fly through air when them guns p-poppin\'\nPistol swang to ya mouth, then the blood is gushin\'',
     'Cross killers in these streets, bullets will spray\nInnocent bystander can catch a stray ya dig?',
@@ -180,9 +181,9 @@ project_pat_lyrics =[
     'You can call me Mister Whipple, I won\'t do no harmin\'\nNever to the Charmin, come holla at me woman',
     'Bwok bwok, chicken chicken\nBwok bwok, chicken heads',
     'Bald-head skally-wag\nAin\'t got no hair in back\nGelled up weaved up\nYo hair is messed'
-]
+])
 
-wu_tang_lyrics = [
+wu_tang_lyrics = random.choice([
     'Ghostface catch the blast of a hype verse\nMy Glock burst, leave in a hearse, I did worse',
     'Aww shit, Wu-Tang Clan spark the wicks, an\'\nHowever I master the trick just like Nixon',
     'Causin\' terror, quick damage your whole era\nHard rocks is locked the fuck up, or found shot',
@@ -243,9 +244,9 @@ wu_tang_lyrics = [
     'Crazy flamboyant for the rap enjoyment\nMy clan increase like black unemployment',
     'The Wu is too slammin\' for these Cold Killin\' labels\nSome ain\'t had hits since I seen Aunt Mabel\nBe doin\' artists in like Cain did Abel\nNow they money\'s gettin\' stuck to the gum under the table',
     'Now that thought was just as bright as a 20-watt light bulb\nShould\'ve pumped it when I rocked it\nNiggas so stingy they got short arms and deep pockets'
-]
+])
 
-biggie_lyrics = [
+biggie_lyrics = random.choice([
     'Smoking blunts in the project hallways\nShooting dice all day',
     'Back in the days our parents used to take care of us\nLook at \'em now, they even fuckin\' scared of us',
     'If I wasn\'t in the rap game\nI\'d probably have a key knee-deep in the crack game\nBecause the streets is a short stop\nEither you\'re slinging crack rock or you got a wicked jump shot',
@@ -257,14 +258,14 @@ biggie_lyrics = [
     'Big up, big up, it\'s a stick up, stick up\nAnd I\'m shooting niggas quick if ya hiccup',
     'One in the chamber, thirty-two in the clip\nMotherfuckas better strip, (yeah nigga, peel)\nBefore you find out how blue steel feel',
     'And when I rock her and drop her, I\'m taking her doorknockers\nAnd if she\'s resistant: blakka, blakka, blakka',
-    'Tell him Biggie took it, what the fuck he gonna do?\nMan I hope apologetic or I\'m a have to set it\nAnd if I set it, the cocksucker won\'t forget it',
+    'Tell him Biggie took it, what the fuck he gonna do?\nMan I hope apologeti`c or I\'m a have to set it\nAnd if I set it, the cocksucker won\'t forget it',
     'I fuck around and get hardcore\nC-4 to your door, no beef no more nigga',
     'Super Nintendo, Sega Genesis\nWhen I was dead broke, man, I couldn\'t picture this',
     'When I die, fuck it, I wanna go to hell\n\'Cause I\'m a piece of shit, it ain\'t hard to fuckin\' tell',
     'All my life I been considered as the worst\nLyin\' to my mother, even stealin\' out her purse\nCrime after crime, from drugs to extortion\nI know my mother wish she got a fuckin\' abortion'
-]
+])
 
-doc_oct_lyrics = [
+doc_oct_lyrics = random.choice([
     'Fuck my pussy, Doctor!\n',
     'I crank up lyrical flows, spit Spats, what\'s that?\nThe pattern records, don\'t touch the DATs, yo',
     'Suckers with mics that end up with tooth decay\nI, the Doctor, stop ya, in your world, rock ya',
@@ -279,9 +280,9 @@ doc_oct_lyrics = [
     'As I move in rockets, overriding, levels\nNothing\'s aware, same data, same system',
     'Radiation leakage on the promenade deck, access for authorized personnel only',
     'Disappear again, zapped like an android\nFace the fact, I fly on planets every day\nMy nucleus friend, prepare, I return again\nMy 7XL is not yet invented'
-]
+])
 
-eminem_lyrics = [
+eminem_lyrics = random.choice([
     'You don\'t wanna fuck with me\nGirls neither, you ain\'t nothin\' but a slut to me',
     'I invented violence, you vile venomous volatile vicious\nVain Vicodin, vrin vrin vrin!',
     'Texas Chainsaw, left his brains all\nDanglin\' from his neck while his head barely hangs on',
@@ -299,9 +300,9 @@ eminem_lyrics = [
     'My morals went *pffft* when the president got oral Sex in his Oval Office on top of his desk off of his own employee',
     '‘Cause if I ever stuck it to any singer in showbiz\nIt\'d be Jennifer Lopez — and Puffy, you know this\nI\'m sorry Puff, but I don\'t give a fuck\nIf this chick was my own mother\nI\'d still fuck her with no rubber and cum inside her\nAnd have a son and a new brother at the same time\nAnd just say that it ain\'t mine — what\'s my name?',
     'I\'ll show you pussy footin, I\'ll kick a bitch in the cunt, \'til it makes her queef and sounds like a fucking whoopy cushion.'
-]
+])
 
-freddie_gibbs_lyrics = [
+freddie_gibbs_lyrics = random.choice([
     '24 hours to live, what would you do?\nJust get high, treat everyday like my birthday, smoke with the crew',
     'Before I check out, let me diamond my neck out\nBlow a mil on my niggas, fuck bitches like I was fresh out',
     'Fresh to death when I step out, every day approaching the gates\nI live a helluva life, baby, heaven can wait',
@@ -328,7 +329,7 @@ freddie_gibbs_lyrics = [
     'I hate to say it, ain\'t no need to be discreet\nIf she don\'t cop from me, she get it from a nigga up the street\nCause he thuggin\', and yo, she\'d probably suck his dick for it\nShe turnt out so it ain\'t shit to turn a trick for it',
     'My uncle last bitch put him on the glass dick\nTried to rob a man to feed his habit, he got blasted',
     'Cause in the past, my low-class black ass would serve my own fucking family members'
-]
+])
 
 """
 - Spottieottie
@@ -341,7 +342,7 @@ freddie_gibbs_lyrics = [
 - Hootie Hoo
 - Players Ball
 """
-outkast_lyrics = [
+outkast_lyrics = random.choice([
     'The music is like that green stuff\nProvided to you by sack man',
     'Pac man how in the fuck do you think we gon\' do that man?\nRidin\' round Old National on 18\'s without no gat man',
     'I\'m strapped man & ready to bust on any nigga like that man\nMe and my nigga we roll together like Batman and Robin',
@@ -357,9 +358,9 @@ outkast_lyrics = [
     'Sin all depends on what you believing in\nFaith is what you make it that\'s the hardest shit since MC Ren',
     'Alien can blend right on in wit\' yo\' kin\nLook again \'cause I swear I spot one every now and then',
     'It\'s happenin\' again wish I could tell you when\nAndre this is Andre y\'all just gon\' have to make amends'
-]
+])
 
-big_L_lyrics = [
+big_L_lyrics = random.choice([
     'I knocked out so many teeth the tooth fairy went bankrupt',
     'Fucking punk you ain\'t a leader, nobody followed you, you was never shit your mother should\'ve swallowed you...',
     'I\'m tellin you shit is about to get drastic soon\nI\'m quick to blast a goon\nAnd break a motherfucker like a plastic spoon',
@@ -375,4 +376,4 @@ big_L_lyrics = [
     'Facts on tracks I recite well\nEverybody wanna be like Mike, but Mike wanna be like L',
     '"I got more riches than you, fuck more bitches than you\nOnly thing I haven\'t got is more stitches than you',
     'Breaking in cribs with a crowbar\nI wasn\'t poor, I was po\' - I couldn\'t afford the \'o-r\''
-]
+])
