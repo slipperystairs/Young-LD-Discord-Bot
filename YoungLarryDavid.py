@@ -160,9 +160,11 @@ async def on_message(message):
 async def list_server():
     await client.wait_until_ready()
     while not client.is_closed:
-        print("Current servers:")
-        for server in client.servers:
-            print(server.name)
+        servers = list(client.servers)
+        print("Connected on " + str(len(client.servers)) + " servers:")
+        for x in range(len(servers)):
+            print(' ' + servers[x-1].name)
+
         await asyncio.sleep(600)
 
 client.loop.create_task(list_server())
