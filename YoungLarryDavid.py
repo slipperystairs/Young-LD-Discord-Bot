@@ -249,7 +249,7 @@ async def on_message(message):
         #msg.add_field(name='Join our Discord/For Questions/Chilling', value='', inline=False)
         await client.send_message(message.channel, embed=msg)
 
- """"
+"""
 @client.command(pass_context=True)
 async def kanye(ctx):
     kanye_lyrics = random.choice([
