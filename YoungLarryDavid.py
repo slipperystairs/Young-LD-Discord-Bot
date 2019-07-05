@@ -18,7 +18,7 @@ client = Bot(command_prefix=BOT_PREFIX)
 
 @client.event
 async def on_ready():
-    print("It's Gucci Time!")
+    print("Young LD is online")
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
 
@@ -161,6 +161,7 @@ async def list_server():
     await client.wait_until_ready()
     while not client.is_closed:
         servers = list(client.servers)
+        print("Its Gucci Time!")
         print("Connected on " + str(len(client.servers)) + " servers:")
         for x in range(len(servers)):
             print(' ' + servers[x-1].name)
