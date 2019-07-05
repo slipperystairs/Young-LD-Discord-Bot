@@ -120,7 +120,7 @@ async def on_member_join(member):
     await client.send_message(member, "Sup!? It's ya boy Young LD, and my sole purpose in this world is to provide you and your crew with some dank, absurd, hard hittin' rap lyrics.\n" 
     "For a list of all available commands, use the +help command.\n"
     "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
-"""  
+  
 @client.event
 async def on_message(message):
     # Don't need the bot to reply to itself.
@@ -248,7 +248,8 @@ async def on_message(message):
             msg.add_field(name=command, value=description, inline=False)
         #msg.add_field(name='Join our Discord/For Questions/Chilling', value='', inline=False)
         await client.send_message(message.channel, embed=msg)
-"""
+
+ """"
 @client.command(pass_context=True)
 async def kanye(ctx):
     kanye_lyrics = random.choice([
@@ -265,9 +266,9 @@ async def kanye(ctx):
     'Now, if I fuck this model.\n' + 'And she just bleached her asshole\n' +
     'And I get bleach on my T-shirt\n' + 'I\'ma feel like an asshole'
     ])
-    
-    await client.say(kanye_lyrics)
 
+    await client.say(kanye_lyrics)
+"""
 async def list_server():
     await client.wait_until_ready()
     while not client.is_closed:
