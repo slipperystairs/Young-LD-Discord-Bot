@@ -2,7 +2,6 @@ import asyncio
 import random
 import time
 import discord
-import logging
 import os
 import string
 import lyrics
@@ -11,8 +10,6 @@ from spit import spit_game
 from discord.ext.commands import Bot
 from discord.ext import commands
 from collections import defaultdict
-from setup import dbl
-from aiohttp import web
 
 BOT_PREFIX = ("+")
 
@@ -160,52 +157,6 @@ async def on_message(message):
         #msg.add_field(name='Join our Discord/For Questions/Chilling', value='', inline=False)
         await client.send_message(message.channel, embed=msg)
 
-async def _ensure_bot_user(self):
-    await self.bot.wait_until_ready()
-    if self.bot_id is None:
-        self.bot_id = self.bot.user.id
-
-async def post_guild_count(self, shard_count: int = None, shard_no: int = None):
-    """This function is a coroutine.
-    Posts your bot's guild count to discordbots.org
-
-    .. _0 based indexing : https://en.wikipedia.org/wiki/Zero-based_numbering
-
-    Parameters
-    ==========
-
-    shard_count: int[Optional]
-        The total number of shards.
-    shard_no: int[Optional]
-        The index of the current shard. DBL uses `0 based indexing`_ for shards.
-    """
-    await self._ensure_bot_user()
-    await self.http.post_guild_count(self.bot_id, self.guild_count(), shard_count, shard_no)
-
-async def get_guild_count(self, bot_id: int = None):
-    """This function is a coroutine.
-    
-    Gets a guild count from discordbots.org
-
-    Parameters
-    ==========
-
-    bot_id: int[Optional]
-        ID of the bot you want to lookup.
-        Defaults to the discord.py Bot/Client provided in Client init.
-
-    Returns
-    =======
-
-    stats: dict
-        The guild count and shards of a bot.
-        The date object is returned in a datetime.datetime object.
-    """
-    await self._ensure_bot_user()
-    if bot_id is None:
-        bot_id = self.bot_id
-        return await self.http.get_guild_count(bot_id)
-
 async def list_server():
     await client.wait_until_ready()
     while not client.is_closed:
@@ -215,21 +166,6 @@ async def list_server():
             print(' ' + servers[x-1].name)
 
         await asyncio.sleep(600)
-
-class DiscordBotsOrgAPI(commands.Cog):
-    """Handles interactions with the discordbots.org API"""
-
-    def __init__(self, bot):
-        self.bot = bot
-        self.token = 'BOT' # set this to your DBL token
-        self.dblpy = dbl.Client(self.bot, self.token, autopost=True)
-        # autopost will post your guild count every 30 minutes
-
-    async def on_guild_post():
-        print("Server count posted successfully")
-
-def setup(bot):
-    bot.add_cog(DiscordBotsOrgAPI(bot))
-
+        
 client.loop.create_task(list_server())
 client.run(os.getenv('TOKEN'))

@@ -48,4 +48,4 @@ setup(name='dblpy',
           'Topic :: Software Development :: Libraries :: Python Modules',
           'Topic :: Utilities',
       ]
-)
+      )
