@@ -5,6 +5,8 @@ import discord
 import os
 import string
 import lyrics
+import setup
+import discordbot
 from spit import init_markov
 from spit import spit_game
 from discord.ext.commands import Bot
@@ -166,6 +168,6 @@ async def list_server():
             print(' ' + servers[x-1].name)
 
         await asyncio.sleep(600)
-        
+
 client.loop.create_task(list_server())
 client.run(os.getenv('TOKEN'))
