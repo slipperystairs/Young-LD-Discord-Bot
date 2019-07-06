@@ -5,7 +5,6 @@ import discord
 import os
 import string
 import lyrics
-import discordbot
 from spit import init_markov
 from spit import spit_game
 from discord.ext.commands import Bot
