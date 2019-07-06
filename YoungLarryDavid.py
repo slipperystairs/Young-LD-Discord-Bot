@@ -2,6 +2,8 @@ import asyncio
 import random
 import time
 import discord
+import dbl
+import logging
 import os
 import string
 import lyrics
@@ -10,6 +12,8 @@ from spit import spit_game
 from discord.ext.commands import Bot
 from discord.ext import commands
 from collections import defaultdict
+from aiohttp import web
+from .http import HTTPClient
 
 BOT_PREFIX = ("+")
 
@@ -156,6 +160,52 @@ async def on_message(message):
             msg.add_field(name=command, value=description, inline=False)
         #msg.add_field(name='Join our Discord/For Questions/Chilling', value='', inline=False)
         await client.send_message(message.channel, embed=msg)
+
+async def _ensure_bot_user(self):
+    await self.bot.wait_until_ready()
+    if self.bot_id is None:
+        self.bot_id = self.bot.user.id
+
+async def post_guild_count(self, shard_count: int = None, shard_no: int = None):
+    """This function is a coroutine.
+    Posts your bot's guild count to discordbots.org
+
+    .. _0 based indexing : https://en.wikipedia.org/wiki/Zero-based_numbering
+
+    Parameters
+    ==========
+
+    shard_count: int[Optional]
+        The total number of shards.
+    shard_no: int[Optional]
+        The index of the current shard. DBL uses `0 based indexing`_ for shards.
+    """
+    await self._ensure_bot_user()
+    await self.http.post_guild_count(self.bot_id, self.guild_count(), shard_count, shard_no)
+
+async def get_guild_count(self, bot_id: int = None):
+    """This function is a coroutine.
+    
+    Gets a guild count from discordbots.org
+
+    Parameters
+    ==========
+
+    bot_id: int[Optional]
+        ID of the bot you want to lookup.
+        Defaults to the discord.py Bot/Client provided in Client init.
+
+    Returns
+    =======
+
+    stats: dict
+        The guild count and shards of a bot.
+        The date object is returned in a datetime.datetime object.
+    """
+    await self._ensure_bot_user()
+    if bot_id is None:
+        bot_id = self.bot_id
+        return await self.http.get_guild_count(bot_id)
 
 async def list_server():
     await client.wait_until_ready()
