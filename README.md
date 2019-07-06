@@ -31,7 +31,7 @@ Shoutout to https://github.com/sskiswani for helping me out with the text genera
 +spit uses a Markov Chain to generate some funky ass lyrics. 
 ```
 
-#### List of artist to add
+# List of artist to add
 * Kendrick Lamar
 * Pusha T
 * Clipse
