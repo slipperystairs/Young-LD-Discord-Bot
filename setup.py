@@ -14,7 +14,7 @@ with open('requirements.txt') as f:
 if on_rtd:
     requirements.append('sphinxcontrib-napoleon')
 
-with open('dbl/__init__.py') as f:
+with open('__init__.py') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
 with open('README.rst') as f:
