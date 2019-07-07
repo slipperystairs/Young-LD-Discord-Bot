@@ -6,7 +6,7 @@ The bot is currently still a work in progress but I plan on adding more function
 
 Let me know what other artist or lyrics I should add.
 
-Shoutout to https://github.com/sskiswani for helping me out with the text generator. 
+Shoutout to [sskiswani](https://github.com/sskiswani) for helping me out with the text generator. 
 
 #### List of Current Commands
 ```
