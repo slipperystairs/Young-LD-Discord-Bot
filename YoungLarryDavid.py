@@ -4,7 +4,6 @@ import time
 import discord
 import os
 import sys
-import dbl
 import string
 import lyrics
 from spit import init_markov
