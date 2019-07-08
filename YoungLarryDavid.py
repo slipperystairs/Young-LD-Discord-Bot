@@ -3,6 +3,8 @@ import random
 import time
 import discord
 import os
+import dbl
+import logging
 import string
 import lyrics
 from spit import init_markov
@@ -12,6 +14,9 @@ from discord.ext import commands
 from collections import defaultdict
 
 BOT_PREFIX = ("+")
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 client = Bot(command_prefix=BOT_PREFIX)
 #client.remove_command('help') will fix this later
@@ -166,6 +171,31 @@ async def list_server():
             print(server.name)
 
         await asyncio.sleep(600)
+
+class DiscordBotsOrgAPI(commands.Cog):
+    """Handles interactions with the discordbots.org API"""
+
+    def __init__(self, bot):
+        self.bot = bot
+        self.token = os.getenv('DBL_TOKEN') # DBL token
+        self.dblpy = dbl.Client(self.bot, self.token)
+        self.updating = self.bot.loop.create_task(self.update_stats())
+
+    async def update_stats(self):
+        """This function runs every 30 minutes to automatically update your server count"""
+        while not self.bot.is_closed():
+            logger.info('Attempting to post server count')
+            try:
+                await self.dblpy.post_guild_count()
+                logger.info('Posted server count ({})'.format(self.dblpy.guild_count()))
+            except Exception as e:
+                logger.exception('Failed to post server count\n{}: {}'.format(type(e).__name__, e))
+            await asyncio.sleep(1800)
+
+def setup(bot):
+    global logger
+    logger = logging.getLogger('bot')
+    bot.add_cog(DiscordBotsOrgAPI(bot))
 
 client.loop.create_task(list_server())
 client.run(os.getenv('TOKEN'))
