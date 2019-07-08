@@ -3,8 +3,6 @@ import random
 import time
 import discord
 import os
-import dbl
-import logging
 import string
 import lyrics
 from spit import init_markov
@@ -15,17 +13,39 @@ from collections import defaultdict
 
 BOT_PREFIX = ("+")
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
 client = Bot(command_prefix=BOT_PREFIX)
 #client.remove_command('help') will fix this later
+extensions  = ['ld']
 
 @client.event
 async def on_ready():
     print("Young LD is online")
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
+
+@client.command()
+async def load(extension):
+    try:
+        client.load_extension(extension)
+        print('Loaded {}'.format(extension))
+    except Exception as error:
+        print('{} cannot be loaded. [{}]'.format(extension, error))
+
+@client.command()
+async def unload(extension):
+    try:
+        client.unload_extension(extension)
+        print('Unloaded {}'.format(extension))
+    except Exception as error:
+        print('{} cannot be unloaded. [{}]'.format(extension, error))
+
+if __name__ == '__main__':
+    for extension in extensions:
+        try:
+            client.load_extension(extension)
+        except Exception as error:
+            print('{} cannot be loaded. [{}]'.format(extension, error))
+    client.run(os.getenv('TOKEN'))
 
 # Sends a message to a new member that joins the discord server.
 @client.event
@@ -161,7 +181,7 @@ async def on_message(message):
             msg.add_field(name=command, value=description, inline=False)
         #msg.add_field(name='Join our Discord/For Questions/Chilling', value='', inline=False)
         await client.send_message(message.channel, embed=msg)
-
+"""
 async def list_server():
     await client.wait_until_ready()
     while not client.is_closed:
@@ -172,30 +192,5 @@ async def list_server():
 
         await asyncio.sleep(600)
 
-class DiscordBotsOrgAPI(commands.Cog):
-    """Handles interactions with the discordbots.org API"""
-
-    def __init__(self, bot):
-        self.bot = bot
-        self.token = 'TOKEN' # DBL token
-        self.dblpy = dbl.Client(self.bot, self.token)
-        self.updating = self.bot.loop.create_task(self.update_stats())
-
-    async def update_stats(self):
-        """This function runs every 30 minutes to automatically update your server count"""
-        while not self.bot.is_closed():
-            logger.info('Attempting to post server count')
-            try:
-                await self.dblpy.post_guild_count()
-                logger.info('Posted server count ({})'.format(self.dblpy.guild_count()))
-            except Exception as e:
-                logger.exception('Failed to post server count\n{}: {}'.format(type(e).__name__, e))
-            await asyncio.sleep(1800)
-
-def setup(bot):
-    global logger
-    logger = logging.getLogger('bot')
-    bot.add_cog(DiscordBotsOrgAPI(bot))
-
 client.loop.create_task(list_server())
-client.run(os.getenv('TOKEN'))
+"""
