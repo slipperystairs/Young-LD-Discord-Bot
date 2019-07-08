@@ -3,7 +3,6 @@ import random
 import time
 import discord
 import os
-import sys
 import string
 import lyrics
 from spit import init_markov
