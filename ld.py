@@ -1,4 +1,6 @@
 import dbl
+import os
+import sys
 import discord
 from discord.ext import commands
 
@@ -7,7 +9,7 @@ class DiscordBotsOrgAPI(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.token = 'DBL_TOKEN' # set this to your DBL token
+        self.token = 'TOKEN' # set this to your DBL token
         self.dblpy = dbl.Client(self.client, self.token, autopost=True)
         # autopost will post your guild count every 30 minutes
 
