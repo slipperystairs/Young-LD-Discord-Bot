@@ -21,7 +21,14 @@ async def on_ready():
     print("Young LD is online")
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
-    
+
+# Sends a message to a new member that joins the discord server.
+@client.event
+async def on_member_join(member):
+    await client.send_message(member, "Sup!? It's ya boy Young LD, and my sole purpose in this world is to provide you and your crew with some dank, absurd, hard hittin' rap lyrics.\n" 
+    "For a list of all available commands, use the +help command.\n"
+    "ps - Wu-Tang is 4 da children and don't forget to Protect Ya Kneck.")
+   
 @client.event
 async def on_message(message):
     # Don't need the bot to reply to itself.
@@ -155,8 +162,8 @@ async def list_server():
     while not client.is_closed:
         servers = list(client.servers)
         print("Its Gucci Time! Young LD is connected to " + str(len(client.servers)) + " servers:")
-        for x in range(len(servers)):
-            print(' ' + servers[x-1].name)
+        for server in servers:
+            print(server.name)
 
         await asyncio.sleep(600)
 
