@@ -16,13 +16,39 @@ BOT_PREFIX = ("+")
 
 client = Bot(command_prefix=BOT_PREFIX)
 #client.remove_command('help') will fix this later
-extensions  = ['ld']
+#extensions  = ['ld']
 
 @client.event
 async def on_ready():
     print("Young LD is online")
     init_markov()
     await client.change_presence(game=discord.Game(name='+help for command list!'))
+
+"""
+@client.command()
+async def load(extension):
+    try:
+        client.load_extension(extension)
+        print('Loaded {}'.format(extension))
+    except Exception as error:
+        print('{} cannot be loaded. [{}]'.format(extension, error))
+
+@client.command()
+async def unload(extension):
+    try:
+        client.unload_extension(extension)
+        print('Unloaded {}'.format(extension))
+    except Exception as error:
+        print('{} cannot be unloaded. [{}]'.format(extension, error))
+
+if __name__ == '__main__':
+    for extension in extensions:
+        try:
+            client.load_extension(extension)
+        except Exception as error:
+            print('{} cannot be loaded. [{}]'.format(extension, error))
+    client.run(os.getenv('TOKEN'))
+"""
 
 # Sends a message to a new member that joins the discord server.
 @client.event
@@ -158,7 +184,7 @@ async def on_message(message):
             msg.add_field(name=command, value=description, inline=False)
         #msg.add_field(name='Join our Discord/For Questions/Chilling', value='', inline=False)
         await client.send_message(message.channel, embed=msg)
-"""
+
 async def list_server():
     await client.wait_until_ready()
     while not client.is_closed:
@@ -170,27 +196,4 @@ async def list_server():
         await asyncio.sleep(600)
 
 client.loop.create_task(list_server())
-"""
-@client.command()
-async def load(extension):
-    try:
-        client.load_extension(extension)
-        print('Loaded {}'.format(extension))
-    except Exception as error:
-        print('{} cannot be loaded. [{}]'.format(extension, error))
-
-@client.command()
-async def unload(extension):
-    try:
-        client.unload_extension(extension)
-        print('Unloaded {}'.format(extension))
-    except Exception as error:
-        print('{} cannot be unloaded. [{}]'.format(extension, error))
-
-if __name__ == '__main__':
-    for extension in extensions:
-        try:
-            client.load_extension(extension)
-        except Exception as error:
-            print('{} cannot be loaded. [{}]'.format(extension, error))
 client.run(os.getenv('TOKEN'))
