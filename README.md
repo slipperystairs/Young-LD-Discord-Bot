@@ -6,7 +6,7 @@ The bot is currently still a work in progress but I plan on adding more function
 
 Let me know what other artist or lyrics I should add.
 
-Shoutout to [sskiswani](https://github.com/sskiswani) for helping me out with the text generator. 
+Shoutout to https://github.com/sskiswani for helping me out with the text generator. 
 
 #### List of Current Commands
 ```
@@ -31,42 +31,3 @@ Shoutout to [sskiswani](https://github.com/sskiswani) for helping me out with th
 +spit uses a Markov Chain to generate some funky ass lyrics. 
 ```
 
-# List of artist to add
-* Kendrick Lamar
-* Pusha T
-* Clipse
-* 69 Boyz
-* 2 Live Crew
-* Eazy E & NWA
-* Trick Daddy
-* Tupac
-* A Tribe Called Quest
-* ASAP Ferg
-* Schoolboy Q
-* Lil Waye
-* Master P
-* DMX
-* UGK
-* Madvillian
-* Method Man
-* Ghostface Killah
-* Raekwon the Chef
-* GZA
-* Akinyele
-* Jay-Z
-* Big Tymers
-* MF Doom
-* Bone Thugs n Harmony
-* Busta Rhymes
-* Juicy J
-* Ludacris
-* Mobb Deep
-* Naughty by Nature
-* Onyx
-* Ol' Dirt Bastard
-* Public Enemy
-* Run the Jewels
-* Waka Flocka Flame
-* OJ Da Juice Man
-* 2 Chainz
-* Big K.R.I.T
