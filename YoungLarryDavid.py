@@ -490,6 +490,7 @@ def spit_game():
 
     # the result is an array so just make it a string
     return ' '.join(result) + '.'
+
 @client.event
 async def on_ready():
     print("Young LD is online")
@@ -510,68 +511,68 @@ async def on_message(message):
         return
 
     # Randomly picks a lyric from the list of kanye_lyrics
-    if message.content.upper().startswith('+KANYE'):
+    if message.content.upper().startswith('+kanye'):
         await client.send_message(message.channel, random.choice(lyrics.kanye_lyrics))
 
     # Randomly picks a lyric from the list of gucci_lyrics
-    if message.content.upper().startswith('+GUCCI'):
+    if message.content.upper().startswith('+gucci'):
         await client.send_message(message.channel, random.choice(lyrics.gucci_lyrics))
 
     # Randomly picks a lyrics from the list of random_lyrics
-    if message.content.upper().startswith('+RANDOM'):
+    if message.content.upper().startswith('+random'):
         await client.send_message(message.channel, random.choice(lyrics.random_lyrics))
 
     # Randomly picks lyrics from the list of nas_lyrics
     # primarily lyrics from illmatic aka the best hip hop album of all time
-    if message.content.upper().startswith('+NAS'):
+    if message.content.upper().startswith('+nas'):
         await client.send_message(message.channel, random.choice(lyrics.nas_lyrics))
 
     # Randomly picks lyrics from the list of E40_lyrics
-    if message.content.upper().startswith('+E40'):
+    if message.content.upper().startswith('+e40'):
         await client.send_message(message.channel, random.choice(lyrics.E40_lyrics))
 
     # Randomly picks lyrics from the list of snoop_dogg_lyrics
-    if message.content.upper().startswith('+SNOOP'):
+    if message.content.upper().startswith('+snoop'):
         await client.send_message(message.channel, random.choice(lyrics.snoop_dogg_lyrics))
 
     # Randomly picks lyrics from the list of three_six_lyrics
-    if message.content.upper().startswith('+TRIPLE6'):
+    if message.content.upper().startswith('+triple6'):
         await client.send_message(message.channel, random.choice(lyrics.three_six_lyrics))
 
     # Randomly picks lyrics from the list of project_pat_lyrics
-    if message.content.upper().startswith('+PAT'):
+    if message.content.upper().startswith('+pat'):
         await client.send_message(message.channel, random.choice(lyrics.project_pat_lyrics))
 
     # Randomly picks lyrics from the list of wu_tang_lyrics
-    if message.content.upper().startswith('+WUTANG'):
+    if message.content.upper().startswith('+wutang'):
         await client.send_message(message.channel, random.choice(lyrics.wu_tang_lyrics))
 
     # Randomly picks lyrics from the list of biggie_lyrics
-    if message.content.upper().startswith('+BIGGIE'):
+    if message.content.upper().startswith('+biggie'):
         await client.send_message(message.channel, random.choice(lyrics.biggie_lyrics))
 
     # Rancomly picks lyrics from the list of doc_oct_lyrics
-    if message.content.upper().startswith('+DROCTAGON'):
+    if message.content.upper().startswith('+droct'):
         await client.send_message(message.channel, random.choice(lyrics.doc_oct_lyrics))
 
     # Randomly picks lyrics from the list of eminem_lyrics
-    if message.content.upper().startswith('+EMINEM'):
+    if message.content.upper().startswith('+eminem'):
         await client.send_message(message.channel, random.choice(lyrics.eminem_lyrics))
 
     # Randomly picks lyrics from the list of gangsta gibbs lyrics
-    if message.content.upper().startswith('+GIBBS'):
+    if message.content.upper().startswith('+gibbs'):
         await client.send_message(message.channel, random.choice(lyrics.freddie_gibbs_lyrics))
 
     # Randomly picks lyrics from the list of Big L lyrics
-    if message.content.upper().startswith('+BIGL'):
+    if message.content.upper().startswith('+bigl'):
         await client.send_message(message.channel, random.choice(lyrics.big_L_lyrics))
 
     # Randomly picks lyrics from the list of Outkast lyrics
-    if message.content.upper().startswith('+OUTKAST'):
+    if message.content.upper().startswith('+outkast'):
         await client.send_message(message.channel, random.choice(lyrics.outkast_lyrics))
 
     # Displays the bots personal opinion on who are the top 10 best hip-hop artist of all time
-    if message.content.upper().startswith('+TOP10'):
+    if message.content.upper().startswith('+top10'):
         await client.send_message(message.channel, "This is my top ten list of the best hip-hop artist of all time.\n"
                                   "1. Nas\n"
                                   "2. Ghostface Killah\n"
@@ -585,7 +586,7 @@ async def on_message(message):
                                   "10. Jay-Z")
 
     # Displays the bots personal opinion on who are the top 10 best hip-hop producers of all time
-    if message.content.upper().startswith('+PRODUCERS'):
+    if message.content.upper().startswith('+producers'):
         await client.send_message(message.channel, "This is my top ten list of best hip-hop producers of all time.\n"
                                   "1. J Dilla\n"
                                   "2. Madlib\n"
@@ -615,7 +616,7 @@ async def on_message(message):
         commands['+pat']='Displays random lyrics by Project Pat.'
         commands['+wutang']='Wu-Tang is for the the children.'
         commands['+biggie']='Displays random lyrics by the black Frank White.'
-        commands['+droctagon']='Displays random lyrics by Dr.Octagon AKA the Dr.Octagonecologyst.'
+        commands['+droct']='Displays random lyrics by Dr.Octagon AKA the Dr.Octagonecologyst.'
         commands['+eminem']='Displays random lyrics by Eminem.'
         commands['+gibbs']='Displays random lyrics by Gangsta Gibbs.'
         commands['+bigl']='Displays random lyrics by Big L.'
